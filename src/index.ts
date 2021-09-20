@@ -7,14 +7,10 @@ import routes from "./routes";
 
 const app = express();
 
-app.use(cors({
-    origin: [
-        "http://localhost:4200"
-    ], credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 
 app.use(routes)
 
-app.listen(5000, () => console.log("🚀 Server started as port 5000"))
+app.listen("https://crud-produtos-test.herokuapp.com/", () => console.log("🚀 Server started as port 5000"))
